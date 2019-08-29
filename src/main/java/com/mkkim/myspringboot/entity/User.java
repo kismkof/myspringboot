@@ -1,19 +1,34 @@
 package com.mkkim.myspringboot.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
+
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 @Entity
-public class User {
+public class User implements Serializable{
+	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue
+	@JacksonXmlProperty(isAttribute=true)
 	private Long id;
+	
 	@Column
+	@JacksonXmlProperty
+	@NotBlank(message="name은 필수 입력 항목입니다.")
 	private String name;
+	
 	@Column
+	@JacksonXmlProperty
+	@NotBlank(message="email은 필수 입력 항목입니다.")
 	private String email;
+	
 	public Long getId() {
 		return id;
 	}

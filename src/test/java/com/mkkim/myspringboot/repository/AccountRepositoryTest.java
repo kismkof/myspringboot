@@ -25,12 +25,12 @@ public class AccountRepositoryTest {
 	
 	@Test
 	public void account() throws Exception {
-//		accountRepository.findAll(new Sort(Direction.DESC, "id"));
-//		Account account = new Account();
-//		account.setUsername("spring");
-//		account.setPassword("spring");
-//		Account newAcct = accountRepository.save(account);
-//		System.out.println(newAcct.getId() + " " + newAcct.getUsername());
+		accountRepository.findAll(new Sort(Direction.DESC, "id"));
+		Account account = new Account();
+		account.setUsername("spring");
+		account.setPassword("spring");
+		Account newAcct = accountRepository.save(account);
+		System.out.println(newAcct.getId() + " " + newAcct.getUsername());
 //		assertThat(newAcct).isNotNull();
 		
 //		Account existAcct = accountRepository.findByUsername(newAcct.getUsername());
