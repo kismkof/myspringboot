@@ -23,7 +23,7 @@ public class UserController {
 		return "add-user";
 	}
 	
-	@PostMapping("adduser")
+	@PostMapping("/adduser")
 	public String addUser(@Valid User user, BindingResult result, Model model) {
 		if (result.hasErrors()) {
 			return "add-user";
