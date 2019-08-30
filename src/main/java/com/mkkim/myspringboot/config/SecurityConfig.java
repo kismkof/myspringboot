@@ -22,6 +22,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.and()
 			.formLogin()
 			.and()
-			.httpBasic();
+			.httpBasic()
+			.and()
+			.logout()
+			.logoutUrl("/logout")
+			.deleteCookies("JSESSIONID")
+			.logoutSuccessUrl("/");
 	}
 }

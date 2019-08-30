@@ -72,7 +72,9 @@ public class UserController {
 	}
 	
 	@GetMapping("/mypage")
-	public String mypage() {
+	public String mypage(Model model) {
+		String username = null;
+		model.addAttribute("username", username);
 		return "mypage";
 	}
 }
