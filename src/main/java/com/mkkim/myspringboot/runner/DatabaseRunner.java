@@ -1,7 +1,6 @@
 package com.mkkim.myspringboot.runner;
 
 import java.sql.Connection;
-import java.sql.Statement;
 
 import javax.sql.DataSource;
 
